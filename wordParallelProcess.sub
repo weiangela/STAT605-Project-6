@@ -1,0 +1,21 @@
+# Run parallel jobs to sum each of the several data.txt.* partial files.
+
+log    =    log/$(Cluster)_$(file).log
+error  =  error/$(Cluster)_$(file).err
+output = output/$(Cluster)_$(file).out
+
+universe = vanilla
+
+executable = ./myscript.py
+arguments = $(file)
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_input_files = $(file)
+
+request_cpus = 1
+request_memory = 1GB
+request_disk = 500MB
+
+queue file from filenames.csv
+
