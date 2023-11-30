@@ -1,0 +1,22 @@
+universe = vanilla
+log    =    log/proj-chtc_$(Cluster)_$(Process).log
+error  =  error/proj-chtc_$(Cluster)_$(Process).err
+output = output/proj-chtc_$(Cluster)_$(Process).out
+
+executable = ./test.sh
+
+arguments = $(filename)
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+
+# add packages: can find python on chtc, other packages unknown
+transfer_input_files = test7/$(filename), test.py, test.sh, python310.tar.gz, json.tar.gz, nltk.tar.gz, re.tar.gz, ssl.tar.gz, pandas.tar.gz, gensim.tar.gz, csv.tar.gz
+
+transfer_output_files = $(filename).csv
+
+request_cpus = 1
+request_memory = 500MB
+request_disk = 510MB
+
+queue filename from test.txt
