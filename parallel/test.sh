@@ -2,7 +2,7 @@
 
 tar -xzf python310.tar.gz
 
-# tar -xzf other packages
+tar -xzf packages.tar.gz
 
 export PATH=$PWD/Python/bin:$PATH
 export Py_HOME=$PWD/Python

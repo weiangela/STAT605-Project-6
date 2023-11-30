@@ -8,8 +8,11 @@ from nltk.tag import pos_tag
 import pandas as pd
 from gensim import corpora, models
 import csv
+import sys 
 
-with open(paste0('test7/',$1), 'r') as file:
+file_name = sys.argv[1]
+
+with open(('test7/'+file_name), 'r') as file:
     data = json.load(file)
 text = data["abstract"][0]['text']
 
@@ -45,7 +48,7 @@ topics = lda_model.print_topics()
 first_topic = lda_model.show_topic(0)
 topic_list = [word for word, _ in first_topic]
 
-csv_file_path = paste0($1,'.csv')
+csv_file_path = file_name+'.csv'
 with open(csv_file_path, 'w', newline='') as csv_file:
     writer = csv.writer(csv_file)
     writer.writerow(topic_list)
