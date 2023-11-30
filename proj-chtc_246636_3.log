@@ -1,0 +1,32 @@
+000 (246636.002.000) 2023-11-29 21:01:04 Job submitted from host: <128.104.100.148:9618?addrs=128.104.100.148-9618+[2607-f388-107c-501-216-3eff-feb2-bc11]-9618&alias=learn.chtc.wisc.edu&noUDP&sock=schedd_1351356_64bc>
+...
+040 (246636.002.000) 2023-11-29 21:03:15 Started transferring input files
+	Transferring to host: <128.105.69.192:9618?addrs=128.105.69.192-9618+[2607-f388-2200-100-1270-fdff-fe56-bc04]-9618&alias=build4002.chtc.wisc.edu&noUDP&sock=interactive3_1_1313598_5fe2_75261>
+...
+040 (246636.002.000) 2023-11-29 21:03:19 Finished transferring input files
+...
+001 (246636.002.000) 2023-11-29 21:03:19 Job executing on host: <128.105.69.192:9618?addrs=128.105.69.192-9618+[2607-f388-2200-100-1270-fdff-fe56-bc04]-9618&alias=build4002.chtc.wisc.edu&noUDP&sock=startd_2072560_59af>
+	SlotName: interactive3_1@build4002.chtc.wisc.edu
+	CondorScratchDir = "/var/lib/condor/execute/slot3/dir_3921660"
+	Cpus = 1
+	Disk = 1208198
+	IoHeavy = 0
+	Memory = 512
+...
+006 (246636.002.000) 2023-11-29 21:03:28 Image size of job updated: 1000
+	1  -  MemoryUsage of job (MB)
+	12  -  ResidentSetSize of job (KB)
+...
+040 (246636.002.000) 2023-11-29 21:06:19 Started transferring output files
+...
+040 (246636.002.000) 2023-11-29 21:06:19 Finished transferring output files
+...
+007 (246636.002.000) 2023-11-29 21:06:19 Shadow exception!
+	Error from interactive3_1@build4002.chtc.wisc.edu: STARTER at 128.105.69.192 failed to send file(s) to <128.104.100.148:9618>: |Error: reading from file /var/lib/condor/execute/slot3/dir_3921660/9992ffbec7c8256d057b05a858cde82d36d64ae3.json.csv: (errno 2) No such file or directory; SHADOW failed to receive file(s) from <128.105.69.192:43639>
+	0  -  Run Bytes Sent By Job
+	111362168  -  Run Bytes Received By Job
+...
+012 (246636.002.000) 2023-11-29 21:06:19 Job was held.
+	Transfer output files failure at execution point interactive3_1@build4002.chtc.wisc.edu while sending files to access point learn. Details: reading from file /var/lib/condor/execute/slot3/dir_3921660/9992ffbec7c8256d057b05a858cde82d36d64ae3.json.csv: (errno 2) No such file or directory
+	Code 12 Subcode 2
+...
